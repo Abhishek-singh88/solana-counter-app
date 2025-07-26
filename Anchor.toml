@@ -1,0 +1,20 @@
+[toolchain]
+package_manager = "yarn"
+
+[features]
+resolution = true
+skip-lint = false
+
+[programs.devnet]
+solana_counter_app = "7zmrvfTXyii3LuLUFuodgT6kP5AnxcD26LVSMSRueAkH"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "devnet"
+wallet = "~/.config/solana/id.json"
+
+[scripts]
+test = "npx mocha -t 1000000 tests/solana_counter_app.js"
+
